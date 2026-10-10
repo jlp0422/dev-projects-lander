@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className="text-gradient text-5xl font-semibold tracking-tight sm:text-6xl">
             jeremyphilipson<span className="text-foreground/40">.dev</span>
           </h1>
-          <p className="mt-4 max-w-md text-lg text-foreground/60">
+          <p className="mt-4 text-lg text-foreground/60">
             A collection of side projects, experiments, and things I build for fun.
           </p>
         </header>

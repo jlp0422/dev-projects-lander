@@ -13,10 +13,10 @@ export const projects: Project[] = [
     github: "https://github.com/jlp0422/fate-of-the-eight",
   },
   {
-    name: "Sport Logo Alphabet Quiz",
-    url: "https://sport-logo-alphabet-quiz.jeremyphilipson.dev",
-    description: "A trivia game that tests your knowledge of sports logos using the letters found in each one.",
-    github: "https://github.com/jlp0422/sport-logo-alphabet-quiz",
+    name: "NFL Wins Pool",
+    url: "https://nfl-wins-pool.jeremyphilipson.dev",
+    description: "Multi-year wins pool standings for friends, tracking weekly wins and results over time.",
+    github: "https://github.com/jlp0422/nfl-wins-pool",
   },
   {
     name: "Coffee Golf Leaderboard",
@@ -31,9 +31,9 @@ export const projects: Project[] = [
     github: "https://github.com/jlp0422/sports-percentage",
   },
   {
-    name: "NFL Wins Pool",
-    url: "https://nfl-wins-pool.jeremyphilipson.dev",
-    description: "Multi-year wins pool standings for friends, tracking weekly wins and results over time.",
-    github: "https://github.com/jlp0422/nfl-wins-pool",
+    name: "Sport Logo Alphabet Quiz",
+    url: "https://sport-logo-alphabet-quiz.jeremyphilipson.dev",
+    description: "A trivia game that tests your knowledge of sports logos using the letters found in each one.",
+    github: "https://github.com/jlp0422/sport-logo-alphabet-quiz",
   },
 ];
