@@ -22,32 +22,47 @@ export default function Home() {
 
         <ul className="grid gap-4 sm:grid-cols-2">
           {projects.map((project, i) => (
-            <li key={project.url}>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex h-full flex-col rounded-xl border border-foreground/10 bg-background/60 p-6 backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-lg hover:shadow-foreground/5"
-              >
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="font-mono text-xs text-foreground/40">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span
-                    className="text-foreground/30 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground"
-                    aria-hidden
-                  >
-                    ↗
-                  </span>
-                </div>
-                <h2 className="text-lg font-medium">{project.name}</h2>
-                <p className="mt-1 flex-1 text-sm leading-relaxed text-foreground/60">
-                  {project.description}
-                </p>
-                <p className="mt-5 font-mono text-xs text-foreground/40 transition group-hover:text-foreground/70">
+            <li
+              key={project.url}
+              className="group relative flex h-full flex-col rounded-xl border border-foreground/10 bg-background/60 p-6 backdrop-blur transition duration-200 focus-within:border-foreground/30 hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-lg hover:shadow-foreground/5"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <span className="font-mono text-xs text-foreground/40">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className="text-foreground/30 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground"
+                  aria-hidden
+                >
+                  ↗
+                </span>
+              </div>
+              <h2 className="text-lg font-medium">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="after:absolute after:inset-0 after:content-[''] focus:outline-none"
+                >
+                  {project.name}
+                </a>
+              </h2>
+              <p className="mt-1 flex-1 text-sm leading-relaxed text-foreground/60">
+                {project.description}
+              </p>
+              <div className="mt-5 flex items-center justify-between font-mono text-xs text-foreground/40">
+                <span className="transition group-hover:text-foreground/70">
                   {new URL(project.url).host}
-                </p>
-              </a>
+                </span>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 rounded px-1 transition hover:text-foreground"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </li>
           ))}
         </ul>
